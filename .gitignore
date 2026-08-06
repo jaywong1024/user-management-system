@@ -1,0 +1,9 @@
+target/
+.idea/
+*.iml
+.DS_Store
+*.log
+.env
+
+### IntelliJ IDEAのHTTPクライアントが生成する個人用ファイル
+.idea/httpRequests/
