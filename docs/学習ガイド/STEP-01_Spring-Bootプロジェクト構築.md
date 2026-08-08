@@ -109,7 +109,7 @@ curl http://localhost:8080/actuator/health
 
 ### 日本語
 
-> このプロジェクトでは、Java 21、Spring Boot 3.5、Mavenを使用しています。Spring Bootを採用した理由は、自動構成とStarterによる依存関係管理を利用して、業務機能の実装に集中できるためです。また、組み込みTomcatを利用しているため、実行可能なJARとして単独で起動できます。現在はプロジェクトの基盤構築まで完了しており、次のSTEPでユーザー登録APIとPostgreSQL接続を実装する予定です。
+> このプロジェクトでは、Java 21、Spring Boot 3.5、Mavenを使用しています。Spring Bootを採用した理由は、自動構成とStarterによる依存関係管理を利用して、業務機能の実装に集中できるためです。また、組み込みTomcatを利用しているため、実行可能なJARとして単独で起動できます。現在はプロジェクトの基盤構築とPostgreSQL接続まで完了しており、次のSTEPでユーザー登録APIを実装する予定です。
 
 ### 中文理解
 

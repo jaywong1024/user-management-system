@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:17.10-bookworm
+    container_name: ums-postgres
+    restart: unless-stopped
+    # Docker 19.03 on the CentOS 7 learning VM cannot run the Bookworm image
+    # with its outdated default seccomp profile. This setting applies only to
+    # this database container and should be removed after Docker is upgraded.
+    security_opt:
+      - seccomp=unconfined
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - ums-postgres-data:/var/lib/postgresql/data
+      - ./init/01-create-roles.sh:/docker-entrypoint-initdb.d/01-create-roles.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+volumes:
+  ums-postgres-data:
+    name: ums-postgres-data
