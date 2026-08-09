@@ -12,6 +12,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class UserManagementApplication {
 
+    /**
+     * Javaプロセスのエントリーポイント。
+     *
+     * @param args コマンドラインから渡される起動引数
+     */
     public static void main(String[] args) {
         SpringApplication.run(UserManagementApplication.class, args);
     }

@@ -67,7 +67,7 @@ Starterを利用すると、関連ライブラリのバージョンを一つず�
 
 ### データベース
 
-STEP 02でPostgreSQL、Spring Data JPA、Flywayを追加する予定である。現時点ではデータベースがなくてもアプリケーションを起動できる。
+STEP 02でMySQLとSpring Data JPAを追加し、ユーザー登録APIを段階的に実装する。
 
 ### Spring Security
 
@@ -109,11 +109,11 @@ curl http://localhost:8080/actuator/health
 
 ### 日本語
 
-> このプロジェクトでは、Java 21、Spring Boot 3.5、Mavenを使用しています。Spring Bootを採用した理由は、自動構成とStarterによる依存関係管理を利用して、業務機能の実装に集中できるためです。また、組み込みTomcatを利用しているため、実行可能なJARとして単独で起動できます。現在はプロジェクトの基盤構築とPostgreSQL接続まで完了しており、次のSTEPでユーザー登録APIを実装する予定です。
+> このプロジェクトでは、Java 21、Spring Boot 3.5、Mavenを使用しています。Spring Bootを採用した理由は、自動構成とStarterによる依存関係管理を利用して、業務機能の実装に集中できるためです。また、組み込みTomcatを利用しているため、実行可能なJARとして単独で起動できます。現在はプロジェクトの基盤構築とMySQL接続まで完了しており、次のSTEPでユーザー登録APIを実装する予定です。
 
 ### 中文理解
 
-这个项目使用Java 21、Spring Boot 3.5和Maven。选择Spring Boot是因为可以利用自动配置和Starter依赖管理，把精力集中在业务功能上。同时使用内嵌Tomcat，可以将应用作为可执行JAR独立启动。目前完成了项目基础搭建，下一步会实现用户注册API和PostgreSQL连接。
+这个项目使用Java 21、Spring Boot 3.5和Maven。选择Spring Boot是因为可以利用自动配置和Starter依赖管理，把精力集中在业务功能上。同时使用内嵌Tomcat，可以将应用作为可执行JAR独立启动。目前已经完成项目基础搭建和MySQL连接，下一步会实现用户注册API。
 
 ## 8. 理解チェック
 
@@ -164,4 +164,4 @@ curl http://localhost:8080/actuator/health
 - 阅读`基本設計書.md`的第1～8节。
 - 尝试回答“理解チェック”的7个问题。
 
-确认理解后，再进入STEP 02：用户注册API的基本实现。
+确认理解后，再进入STEP 02：JPAによるデータアクセス

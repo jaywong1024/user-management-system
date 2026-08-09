@@ -2,23 +2,17 @@ spring:
   application:
     name: user-management-system
   datasource:
-    url: ${DB_URL:jdbc:postgresql://192.168.128.200:5432/user_management}
-    username: ${DB_USERNAME:user_management_app}
-    password: ${DB_PASSWORD}
+    url: ${DB_URL:jdbc:mysql://192.168.128.200:3306/user_management?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Tokyo}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:123456}
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     properties:
       hibernate:
         jdbc:
           time_zone: UTC
-  flyway:
-    enabled: true
-    user: ${DB_MIGRATION_USERNAME:user_management_migration}
-    password: ${DB_MIGRATION_PASSWORD}
-    locations: classpath:db/migration
-
 server:
   port: 8080
 
